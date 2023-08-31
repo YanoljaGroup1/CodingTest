@@ -8,7 +8,7 @@ vector<int> solution(vector<int> answers) {
     vector<int> num1 = {1,2,3,4,5}; // 1번 찍기 2000
     vector<int> num2 = {2,1,2,3,2,4,2,5}; // 2번 찍기 1250
     vector<int> num3 = {3,3,1,1,2,2,4,4,5,5}; // 3번 찍기 1000
-    vector<vector<int>> container;
+    vector<vector<int>> container; // num 배열 저장
     vector<int> cntcontainer;
     for(int i=0;i<1999;i++){
         for(int j=0;j<5;j++){

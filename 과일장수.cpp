@@ -14,7 +14,6 @@ int solution(int k, int m, vector<int> score) {
     vector<vector<int>> container;
     int answer = 0;
     sort(score.begin(), score.end(), greater<int>()); // 내림차순
-    
     for(int i=0;i<score.size();i+=m){
         vector<int> mid; 
         for(int j=0;j<m;j++){

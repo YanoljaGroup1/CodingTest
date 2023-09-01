@@ -1,7 +1,6 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-
 int solution(vector<int> nums)
 {
     int answer = 0;
@@ -16,7 +15,6 @@ int solution(vector<int> nums)
             if(stack[stack.size()-1]!=nums[i]){
                 if(stack.size()<maxi)
                     stack.push_back(nums[i]);
-                    
             }
             else{
                 continue;

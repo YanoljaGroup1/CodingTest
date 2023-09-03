@@ -11,7 +11,7 @@ function solution(k, m, score) {
       box[box.length - 1].push(item);
     }
   });
-  box = box.filter((e) => e.length >= m);
+  box = box.filter((e) => e.length === m);
   box.forEach((e) => {
     e.sort((a, b) => a - b);
     answer += e[0] * e.length;

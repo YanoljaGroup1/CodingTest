@@ -18,4 +18,4 @@ function solution(n) {
 
 solution(10)
 
-// 타임에러 해결못함
+// 타임에러

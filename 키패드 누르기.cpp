@@ -8,8 +8,8 @@ string solution(vector<int> numbers, string hand) {
     
     // 1,4,7 left
     // 3,6,9 right
-    int leftPos=11;
-    int rightPos=13;
+    int leftPos=10;
+    int rightPos=12;
     for(int i=0;i<numbers.size();i++){
         if(numbers[i]==1 || numbers[i]==4 || numbers[i]==7){
             if(numbers[i]==1){
@@ -61,10 +61,10 @@ string solution(vector<int> numbers, string hand) {
                 rightPos=middle;
             }
             }
-            if(numbers[i]==2){
+            else if(numbers[i]==5){
                 int leftDist=abs((leftPos-numbers[i])/3)+abs((leftPos-numbers[i])%3);
                 int rightDist=abs((rightPos-numbers[i])/3)+abs((rightPos-numbers[i])%3);
-                int middle=2;
+                int middle=5;
                 if (leftDist<rightDist) {
                 answer+='L';
                 leftPos=middle;
@@ -84,10 +84,10 @@ string solution(vector<int> numbers, string hand) {
                 rightPos=middle;
             }
             }
-            if(numbers[i]==2){
+            else if(numbers[i]==8){
                 int leftDist=abs((leftPos-numbers[i])/3)+abs((leftPos-numbers[i])%3);
                 int rightDist=abs((rightPos-numbers[i])/3)+abs((rightPos-numbers[i])%3);
-                int middle=2;
+                int middle=8;
                 if (leftDist<rightDist) {
                 answer+='L';
                 leftPos=middle;

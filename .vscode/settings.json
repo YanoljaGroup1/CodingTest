@@ -1,6 +1,7 @@
 {
   "files.associations": {
     "*.cpp": "cpp",
-    "cstdlib": "cpp"
+    "cstdlib": "cpp",
+    "utility": "cpp"
   }
 }

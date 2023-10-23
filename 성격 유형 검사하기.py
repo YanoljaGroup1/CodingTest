@@ -1,3 +1,29 @@
+def solution(survey, choices):
+    score_dict = {'R' : 0, 'T' : 0, 'C' : 0, 'F' : 0, 'J': 0, 'M' : 0, 'A' : 0, 'N' : 0}
+    answer = ''
+    for i in range(len(choices)):
+        if choices[i] >= 5:
+            score_dict[survey[i][1]] += choices[i]-4
+        elif choices[i] <=3:
+            score_dict[survey[i][0]] += 4-choices[i]
+
+    score_values = list(score_dict.values())
+    score_keys = list(score_dict.keys())
+
+    for j in range(0,7,2):
+        if score_values[j] >= score_values[j+1]:
+            answer += score_keys[j]
+        else:
+            answer += score_keys[j+1]
+
+    return answer
+
+survey = ["AN", "CF", "MJ", "RT", "NA"]
+choices = [5, 3, 2, 7, 5]
+result = solution(survey, choices)
+print(result)
+
+
 # s = list(map(str, input().split()))
 # choices = list(map(int, input().split()))
 

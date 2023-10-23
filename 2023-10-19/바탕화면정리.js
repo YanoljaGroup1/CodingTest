@@ -25,13 +25,3 @@ function solution(wallpaper) {
   answer = [...lowY, ...lowX, ...highY, ...highX];
   return answer;
 }
-
-console.log(
-  solution([
-    '..........',
-    '.....#....',
-    '......##..',
-    '...##.....',
-    '....#.....',
-  ])
-);

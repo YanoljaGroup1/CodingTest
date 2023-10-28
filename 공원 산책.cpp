@@ -17,16 +17,13 @@ vector<int> solution(vector<string> park, vector<string> routes) {
         arrX[container[i]]=dx[i];
         arrY[container[i]]=dy[i];
     }
-    bool foundS=false;
     for(int i=0;i<park.size();i++){
         for(int j=0;j<park[i].size();j++){
             if(park[i][j]=='S'){
                 tmp.push_back({i,j});
-                foundS=true;
                 break;
             }
         }
-        if(foundS) break;
     }
     
     int x=tmp.front().first;
@@ -57,6 +54,10 @@ vector<int> solution(vector<string> park, vector<string> routes) {
             answer.push_back(nx);
             answer.push_back(ny);
         }
+    }
+    if(answer.size()==0){
+        answer.push_back(x);
+        answer.push_back(y);
     }
     return answer;
 }
